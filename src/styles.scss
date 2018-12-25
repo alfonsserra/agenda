@@ -28,3 +28,8 @@ body {
 .slab-flex-1 {
   flex: 1;
 }
+
+.slab-overflow-container {
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}

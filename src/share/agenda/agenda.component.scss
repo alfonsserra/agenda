@@ -4,7 +4,7 @@
   margin: auto;
 }
 
-.mobile-wrapper {
+:host {
   background: #fff;
   /* relative with .today-box::before*/
   z-index: 1;  /*positive*/ // PARENT
