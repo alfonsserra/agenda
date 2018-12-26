@@ -1,16 +1,19 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AgendaComponent } from './agenda/agenda.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   imports: [
     CommonModule
   ],
   declarations: [
-    AgendaComponent
+    AgendaComponent,
+    NavbarComponent
   ],
   exports: [
-    AgendaComponent
+    AgendaComponent,
+    NavbarComponent
   ]
 })
 export class SharedModuleModule {

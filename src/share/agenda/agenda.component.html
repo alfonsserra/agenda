@@ -1,68 +1,68 @@
 <div class="d-flex flex-column h-100">
-<!--======= Header =======-->
+  <!--======= Header =======-->
 
-<header class="header">
-  <div class="container">
-    <span>Welcome Back!</span>
-    <h1>Calendar Plan</h1>
+  <header class="header" *ngIf="showHeader">
+    <div class="container">
+      <span>Welcome Back!</span>
+      <h1>Calendar Plan</h1>
 
-    <div class="menu-toggle">
-      <div>
-        <span></span>
-        <span></span>
-        <span></span>
+      <div class="menu-toggle">
+        <div>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
       </div>
     </div>
-  </div>
-</header>
+  </header>
 
-<!--======= Today =======-->
+  <!--======= Today =======-->
 
-<section class="today-box" id="today-box">
-  <span class="breadcrumb-inner">Today</span>
-  <h3 class="date-title">May 15, 2018</h3>
+  <section class="today-box" id="today-box">
+    <span class="breadcrumb-inner">Today</span>
+    <h3 class="date-title">May 15, 2018</h3>
 
-  <div class="plus-icon">
-    <i class="ion ion-ios-add"></i>
-  </div>
-</section>
+    <div class="plus-icon">
+      <i class="ion ion-ios-add"></i>
+    </div>
+  </section>
 
-<!--======= Upcoming Events =======-->
+  <!--======= Upcoming Events =======-->
 
-<section class="upcoming-events slab-flex-1 slab-overflow-container">
-  <div class="container">
-    <h3>
-      Lastest Events
+  <section class="upcoming-events slab-flex-1 slab-overflow-container">
+    <div class="container">
+      <h3>
+        Upcoming appointments
 
-    </h3>
-    <div class="events-wrapper">
+      </h3>
+      <div class="events-wrapper">
 
-      <div *ngFor="let entry of entries" class="event" [class.active]="entry.active" (mouseenter)="enterEntry(entry)" (mouseleave)="leaveEntry(entry)">
-        <i *ngIf="!entry.active" class="ion ion-ios-flame hot"></i>
-        <i *ngIf="entry.active" class="ion ion-ios-radio-button-on icon-in-active-mode"></i>
+        <div *ngFor="let entry of entries" class="event" [class.active]="entry.active" (mouseenter)="enterEntry(entry)" (mouseleave)="leaveEntry(entry)">
+          <i *ngIf="!entry.active" class="ion ion-ios-flame hot"></i>
+          <i *ngIf="entry.active" class="ion ion-ios-radio-button-on icon-in-active-mode"></i>
 
-        <h4 class="event__point">{{entry.time}}</h4>
-        <span *ngIf="!entry.active" class="event__duration">in 30 minutes.</span>
-        <p class="event__description">
-          {{entry.title}}
-        </p>
+          <h4 class="event__point">{{entry.time}}</h4>
+          <span *ngIf="!entry.active" class="event__duration">in 30 minutes.</span>
+          <p class="event__description">
+            {{entry.title}}
+          </p>
+        </div>
+
       </div>
 
     </div>
+  </section>
+  <section class="upcoming-events">
+    <div class="container">
+      <button class="add-event-button">
+        <span class="add-event-button__title">Add Event</span>
 
-  </div>
-</section>
-<section class="upcoming-events">
-  <div class="container">
-    <button class="add-event-button">
-      <span class="add-event-button__title">Add Event</span>
-
-      <span class="add-event-button__icon">
+        <span class="add-event-button__icon">
         <i class="ion ion-ios-star-outline"></i>
       </span>
 
 
-    </button>
-  </div>
-</section>
+      </button>
+    </div>
+  </section>
 </div>
